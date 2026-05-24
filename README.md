@@ -1,26 +1,28 @@
 # ☕ Java Object-Oriented Programming Projects
 
-This repository contains a collection of Java applications and exercises developed during my second semester of Computer Engineering at the University of Bergamo (UniBG).
+This repository contains a collection of academic applications developed during my second semester of Computer Engineering at the University of Bergamo (UniBG). 
 
-The main focus of these projects is to master Object-Oriented Programming (OOP) principles, software design patterns, and robust application architecture.
-
----
-
-## 🛠️ Core OOP Concepts Covered
-
-* **Encapsulation:** Designing secure classes with private attributes, constructors, and proper getters/setters.
-* **Inheritance & Polymorphism:** Creating scalable class hierarchies to reuse code and override behaviors dynamically.
-* **Abstraction:** Utilizing abstract classes and interfaces to define software contracts.
-* **Exception Handling:** Managing runtime errors gracefully using `try-catch` blocks and custom exceptions.
+The focus of these projects ranges from core exception handling to advanced Object-Oriented Software Design (OOP) and structural modeling.
 
 ---
 
-## 📂 Featured Applications
+## 📂 Project Directory
 
-### 🏗️ Project 1: [Nome del tuo primo progetto Java]
-* **Description:** Brief overview of what the application does (e.g., a university management system, a bank account simulator, etc.).
-* **Key Features:** Mention which OOP concepts you used (e.g., "Implements inheritance for different user roles and overrides methods for specific behaviors").
+### 🧮 1. Exception Handling & Fractions (`01-exception-handling-fractions`)
+* **Description:** A robust CLI utility designed to handle logic and runtime mathematical operations with fractions.
+* **Key Features:** * Implements a custom checked exception (`FrazioneNonCorrettaException`) to block domain-specific mathematical errors.
+  * Demonstrates efficient file handling using `java.util.Scanner` protected by multi-catch error tracking blocks.
 
-### 📊 Project 2: [Nome del secondo progetto Java, se presente]
-* **Description:** Brief overview of the program.
-* **Key Features:** (e.g., "Uses Java Collections like ArrayLists to manage data dynamically").
+### ♟️ 2. Chess Board Simulator (`02-chess-board-oop`)
+* **Description:** A complete, object-oriented structural simulation of a classic chess game board, validating movement vectors and logic for every piece.
+* **Key Architecture & OOP Patterns Demonstrated:**
+  * **Inheritance & Polymorphism:** A generalized abstract approach using a base `Pezzo` class, specialized through structural extensions for individual pieces (`Pedone`, `Cavallo`, `Alfiere`, `Torre`, `Regina`, `Re`).
+  * **Domain Validation:** Dynamic rule evaluation (`mossaValida`) using vector tracking, utilizing mathematical calculations (like `Math.abs` and `Integer.signum`) to calculate path steps and check line-of-sight blocks.
+  * **Custom Business Logic Exceptions:** Integrates `MossaIllegaleException` to stop invalid coordinates or illegal gameplay movements.
+  * **Clean Data Modeling:** Uses robust Enum types for piece team alignment (`Color`) and object reference bindings to map matrix positions (`Casella`, `Coordinata`).
+
+---
+
+## 🛠️ Tech Stack & Concepts Covered
+* **Language:** Java SE
+* **Concepts:** Encapsulation, Polymorphism, Inheritance, Exception Routing, Data Structures, Matrix Grid Mapping.
