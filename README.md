@@ -10,7 +10,7 @@ The focus of these projects ranges from core exception handling to advanced Obje
 
 ### 🧮 1. Exception Handling & Fractions (`01-exception-handling-fractions`)
 * **Description:** A robust CLI utility designed to handle logic and runtime mathematical operations with fractions.
-* **Key Features:** * Implements a custom checked exception (`FrazioneNonCorrettaException`) to block domain-specific mathematical errors.
+* **Key Features:** Implements a custom checked exception (`FrazioneNonCorrettaException`) to block domain-specific mathematical errors.
   * Demonstrates efficient file handling using `java.util.Scanner` protected by multi-catch error tracking blocks.
 
 ### ♟️ 2. Chess Board Simulator (`02-chess-board-oop`)
