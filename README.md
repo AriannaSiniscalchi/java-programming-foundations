@@ -43,6 +43,15 @@ The focus of these projects ranges from core exception handling to advanced Obje
     * **Identity Contract**: Overrides `hashCode()` and `equals()` using `java.util.Objects` to ensure logical equality rather than just reference equality.
     * **Performance Optimization**: Demonstrates how consistent hashing improves data retrieval efficiency in hash-based collections.
 
+### 🛒 6. Retail Management System (`06-retail-connect-system`)
+* **Description**: A comprehensive retail ecosystem simulator that manages the entire shopping lifecycle, from warehouse stocking to final receipt generation[cite: 29].
+* **Key Architecture & OOP Patterns**:
+    * **Advanced Collections (Maps & Sets)**: Utilizes `HashMap<Integer, Integer>` in the `Cliente` class to map product IDs to requested quantities for dynamic cart updates. It also uses `HashSet<Prodotto>` in the `Negozio` class to ensure catalog uniqueness.
+    * **Java Stream API & Lambdas**: Implements modern search and filtering logic using `.stream()`, `.filter()`, and `.findFirst()` to efficiently locate products within the store's catalog[cite: 27].
+    * **Business Logic Integration**: The `concludiSpesa` method simulates a real-world transaction by verifying availability, calculating totals, updating store stock, and printing a formatted receipt[cite: 26].
+    * **Data Integrity & Contracts**: Management of the `hashCode` and `equals` contracts (based on unique product IDs) to ensure reliable object handling within hash-based data structures[cite: 28].
+    * **Inventory Synchronization**: Implements logic to handle stock discrepancies using `Math.min()`, preventing sales that exceed current shop availability[cite: 26].
+
 ---
 
 ## 🛠️ Tech Stack & Concepts Covered
