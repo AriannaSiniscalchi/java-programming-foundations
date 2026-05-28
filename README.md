@@ -64,6 +64,15 @@ The focus of these projects ranges from core exception handling to advanced Obje
     * **Resource Management & Lifecycle**: Demonstrates the safe closing of I/O resources using `scanner.close()` to prevent memory leaks, ensuring the program reaches a "Program execution finished" state regardless of success or failure.
     * **UX-Driven Error Messages**: Provides clear, context-specific console output for different failure modes, improving the maintainability and debuggability of the CLI application.
 
+### 📊 11. University Grade Parser & Exception Handling (`11-grade-parser-exception`)
+* **Description**: A multi-class system designed to parse, validate, and analyze academic grade strings using a robust exception handling architecture.
+* **Key Technical Implementation**:
+    * **Domain Model Validation**: Implements a dedicated `VotoStudente.class` that enforces business rules (18-30 range) by throwing a `RuntimeException` during object instantiation.
+    * **Fault-Tolerant Parsing Strategy**: Uses a `try-catch` mechanism within a loop to isolate and skip corrupted data (non-numeric strings or out-of-range values), ensuring the application continues processing the remaining valid data[cite: 28].
+    * **Exception Hierarchy**: Distinguishes between `NumberFormatException` for parsing errors and `RuntimeException` for logical domain violations, demonstrating precise error trapping[cite: 28].
+    * **Data Aggregation**: Utilizes the `ArrayList` collection to store validated objects, facilitating the calculation of statistical metrics such as the maximum grade and the arithmetic mean.
+    * **Code Modularity**: Follows a clean separation of concerns by splitting the logic into a data model, a processing service (`AnalizzatoreVoti.class`), and a driver for testing purposes[cite: 26, 27].
+
 ---
 
 ## 🛠️ Tech Stack & Concepts Covered
