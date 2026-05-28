@@ -52,6 +52,15 @@ The focus of these projects ranges from core exception handling to advanced Obje
     * **Data Integrity & Contracts**: Management of the `hashCode` and `equals` contracts (based on unique product IDs) to ensure reliable object handling within hash-based data structures[cite: 28].
     * **Inventory Synchronization**: Implements logic to handle stock discrepancies using `Math.min()`, preventing sales that exceed current shop availability[cite: 26].
 
+### 💳 7. Advanced Retail Framework (`07-retail-connect-evolved`)
+* **Description**: Evolution of the retail system with a tiered customer structure, implementing loyalty programs and differentiated business logic through OOP principles[cite: 21, 24].
+* **Advanced Technical Implementation**:
+    * **Inheritance & Hierarchy**: Implemented specialized behavior by extending the `Cliente_2.class` into `ClienteTesserato.class`, allowing for code reuse of the core shopping logic while adding loyalty-specific features.
+    * **Polymorphic Method Overriding**: Redefined the `concludiSpesa` method in the subclass to integrate automated loyalty point calculations and tiered discount applications.
+    * **State Persistence**: The system tracks and updates the `saldoPunti` (points balance) across multiple transaction cycles, simulating a persistent user profile within the `TestRetailFramework.class`[cite: 21, 24].
+    * **Smart Stock Management**: Integration between `Cliente_2.class` and `Negozio_2.class` ensures that the `quantita` in `Prodotto_2.class` is dynamically decremented only based on actual availability, using `Math.min()` to prevent over-selling[cite: 20, 23].
+    * **Advanced Search Patterns**: Leverages Java Stream API within `Negozio_2.class` to perform predicate-based searches on a `HashSet` of products, optimizing performance for large catalogs.
+
 ---
 
 ## 🛠️ Tech Stack & Concepts Covered
