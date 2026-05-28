@@ -9,20 +9,43 @@ The focus of these projects ranges from core exception handling to advanced Obje
 ## 📂 Project Directory
 
 ### 🧮 1. Exception Handling & Fractions (`01-exception-handling-fractions`)
-* **Description:** A robust CLI utility designed to handle logic and runtime mathematical operations with fractions.
-* **Key Features:** Implements a custom checked exception (`FrazioneNonCorrettaException`) to block domain-specific mathematical errors.
-  * Demonstrates efficient file handling using `java.util.Scanner` protected by multi-catch error tracking blocks.
+* **Description**: A robust CLI utility designed to handle logic and runtime mathematical operations with fractions[cite: 2].
+* **Key Features**:
+    * **Custom Checked Exception**: Implements `FrazioneNonCorrettaException` to block domain-specific mathematical errors (e.g., zero denominator)[cite: 1].
+    * **Error Tracking**: Demonstrates efficient file handling using `java.util.Scanner` protected by multi-catch blocks for `ArithmeticException` and `IndexOutOfBoundsException`[cite: 2].
 
 ### ♟️ 2. Chess Board Simulator (`02-chess-board-oop`)
-* **Description:** A complete, object-oriented structural simulation of a classic chess game board, validating movement vectors and logic for every piece.
-* **Key Architecture & OOP Patterns Demonstrated:**
-  * **Inheritance & Polymorphism:** A generalized abstract approach using a base `Pezzo` class, specialized through structural extensions for individual pieces (`Pedone`, `Cavallo`, `Alfiere`, `Torre`, `Regina`, `Re`).
-  * **Domain Validation:** Dynamic rule evaluation (`mossaValida`) using vector tracking, utilizing mathematical calculations (like `Math.abs` and `Integer.signum`) to calculate path steps and check line-of-sight blocks.
-  * **Custom Business Logic Exceptions:** Integrates `MossaIllegaleException` to stop invalid coordinates or illegal gameplay movements.
-  * **Clean Data Modeling:** Uses robust Enum types for piece team alignment (`Color`) and object reference bindings to map matrix positions (`Casella`, `Coordinata`).
+* **Description**: A complete, object-oriented structural simulation of a classic chess game board, validating movement vectors and logic for every piece[cite: 3, 11].
+* **Key Architecture & OOP Patterns**:
+    * **Inheritance & Polymorphism**: Uses an abstract base `Pezzo` class extended by specialized pieces such as `Pedone`, `Cavallo`, `Alfiere`, `Torre`, `Regina`, and `Re`[cite: 4, 5, 6, 7, 8, 9, 10].
+    * **Domain Validation**: Dynamic rule evaluation via `mossaValida()`, utilizing `Math.abs` and `Integer.signum` for vector tracking and path checking[cite: 4, 5, 10].
+    * **Custom Logic Exceptions**: Integrates `MossaIllegaleException` to prevent invalid coordinates or illegal moves[cite: 3].
+    * **Data Modeling**: Uses `Enum` for team alignment (`Color`) and object reference bindings to map matrix positions (`Casella`, `Coordinata`)[cite: 11, 12].
+
+### 📄 3. Advanced I/O & Exception Hierarchy (`03-exceptions`)
+* **Description**: Exploration of low-level file streaming and the creation of a tiered exception hierarchy[cite: 13, 14].
+* **Key Features**:
+    * **File Streaming**: Utilizes `FileInputStream` with a byte buffer for efficient data reading from external files like `pippo.txt`[cite: 13, 14].
+    * **Exception Scoping**: Implementation of both **Checked** (`MyException`) and **Unchecked** (`MyExceptionNonControllata`) custom exceptions to demonstrate different error-handling strategies[cite: 15, 16].
+    * **Resource Management**: Ensures proper closing of streams to prevent memory leaks within `try-catch` blocks[cite: 13].
+
+### 📐 4. Geometry System & Interface-Driven Design (`04-EsercitazioneInterfacce`)
+* **Description**: A geometric modeling system that uses interfaces to decouple mathematical logic from graphical representation[cite: 19, 23, 25].
+* **Key Features**:
+    * **Interface-Driven Development**: Uses `Rotatable` and `Scalable` interfaces to define behavioral contracts independently of the class hierarchy[cite: 21, 22].
+    * **Software Decoupling**: Implements `TwoDimensionalCanvas` (via `TextualTwoDimensionalCanvas`) to separate "what" is drawn from "how" it is rendered[cite: 24, 25].
+    * **Computational Geometry**: Logic for generating circle points using trigonometry (`sin`, `cos`) and handling 2D coordinate rotations[cite: 18, 20].
+
+### 👥 5. Collections Framework & Object Identity (`05-collections`)
+* **Description**: Practical application of the Java Collections Framework focusing on data uniqueness and object lifecycle management.
+* **Key Features**:
+    * **Set Management**: Utilizes `HashSet` to manage a collection of unique `Persona` objects.
+    * **Identity Contract**: Overrides `hashCode()` and `equals()` using `java.util.Objects` to ensure logical equality rather than just reference equality.
+    * **Performance Optimization**: Demonstrates how consistent hashing improves data retrieval efficiency in hash-based collections.
 
 ---
 
 ## 🛠️ Tech Stack & Concepts Covered
-* **Language:** Java SE
-* **Concepts:** Encapsulation, Polymorphism, Inheritance, Exception Routing, Data Structures, Matrix Grid Mapping.
+* **Language**: Java SE
+* **Tools**: Git, GitHub, `java.util.Scanner`, `java.util.Collections`, `java.io.Stream`
+* **Concepts**: Encapsulation, Polymorphism, Inheritance, Interface-driven design, Hashing contracts, Custom Exception Routing, Matrix Grid Mapping.
