@@ -9,61 +9,55 @@ The focus of these projects ranges from core exception handling to advanced Obje
 ## 📂 Project Directory
 
 ### 🧮 1. Exception Handling & Fractions (`01-exception-handling-fractions`)
-* **Description**: A robust CLI utility designed to handle logic and runtime mathematical operations with fractions[cite: 2].
+* **Description**: A robust CLI utility designed to handle logic and runtime mathematical operations with fractions.
 * **Key Features**:
-    * **Custom Checked Exception**: Implements `FrazioneNonCorrettaException` to block domain-specific mathematical errors (e.g., zero denominator)[cite: 1].
-    * **Error Tracking**: Demonstrates efficient file handling using `java.util.Scanner` protected by multi-catch blocks for `ArithmeticException` and `IndexOutOfBoundsException`[cite: 2].
+    * **Custom Checked Exception**: Implements `FrazioneNonCorrettaException` to block domain-specific mathematical errors (e.g., zero denominator).
+    * **Error Tracking**: Demonstrates efficient file handling using `java.util.Scanner` protected by multi-catch blocks.
 
 ### ♟️ 2. Chess Board Simulator (`02-chess-board-oop`)
-* **Description**: A complete, object-oriented structural simulation of a classic chess game board, validating movement vectors and logic for every piece[cite: 3, 11].
+* **Description**: A complete, object-oriented structural simulation of a classic chess game board, validating movement vectors and logic for every piece.
 * **Key Architecture & OOP Patterns**:
-    * **Inheritance & Polymorphism**: Uses an abstract base `Pezzo` class extended by specialized pieces such as `Pedone`, `Cavallo`, `Alfiere`, `Torre`, `Regina`, and `Re`[cite: 4, 5, 6, 7, 8, 9, 10].
-    * **Domain Validation**: Dynamic rule evaluation via `mossaValida()`, utilizing `Math.abs` and `Integer.signum` for vector tracking and path checking[cite: 4, 5, 10].
-    * **Custom Logic Exceptions**: Integrates `MossaIllegaleException` to prevent invalid coordinates or illegal moves[cite: 3].
-    * **Data Modeling**: Uses `Enum` for team alignment (`Color`) and object reference bindings to map matrix positions (`Casella`, `Coordinata`)[cite: 11, 12].
+    * **Inheritance & Polymorphism**: Uses an abstract base `Pezzo` class extended by specialized pieces (e.g., `Pedone`, `Regina`).
+    * **Data Modeling**: Uses `Enum` for team alignment (`Color`) and matrix mapping for board coordinates.
 
 ### 📄 3. Advanced I/O & Exception Hierarchy (`03-exceptions`)
-* **Description**: Exploration of low-level file streaming and the creation of a tiered exception hierarchy[cite: 13, 14].
-* **Key Features**:
-    * **File Streaming**: Utilizes `FileInputStream` with a byte buffer for efficient data reading from external files like `pippo.txt`[cite: 13, 14].
-    * **Exception Scoping**: Implementation of both **Checked** (`MyException`) and **Unchecked** (`MyExceptionNonControllata`) custom exceptions to demonstrate different error-handling strategies[cite: 15, 16].
-    * **Resource Management**: Ensures proper closing of streams to prevent memory leaks within `try-catch` blocks[cite: 13].
+* **Description**: Exploration of low-level file streaming and the creation of a tiered exception hierarchy (Checked vs. Unchecked).
 
 ### 📐 4. Geometry System & Interface-Driven Design (`04-EsercitazioneInterfacce`)
-* **Description**: A geometric modeling system that uses interfaces to decouple mathematical logic from graphical representation[cite: 19, 23, 25].
-* **Key Features**:
-    * **Interface-Driven Development**: Uses `Rotatable` and `Scalable` interfaces to define behavioral contracts independently of the class hierarchy[cite: 21, 22].
-    * **Software Decoupling**: Implements `TwoDimensionalCanvas` (via `TextualTwoDimensionalCanvas`) to separate "what" is drawn from "how" it is rendered[cite: 24, 25].
-    * **Computational Geometry**: Logic for generating circle points using trigonometry (`sin`, `cos`) and handling 2D coordinate rotations[cite: 18, 20].
+* **Description**: A geometric modeling system that uses interfaces (`Rotatable`, `Scalable`) to decouple mathematical logic from graphical representation.
 
 ### 👥 5. Collections Framework & Object Identity (`05-collections`)
-* **Description**: Practical application of the Java Collections Framework focusing on data uniqueness and object lifecycle management.
-* **Key Features**:
-    * **Set Management**: Utilizes `HashSet` to manage a collection of unique `Persona` objects.
-    * **Identity Contract**: Overrides `hashCode()` and `equals()` using `java.util.Objects` to ensure logical equality rather than just reference equality.
-    * **Performance Optimization**: Demonstrates how consistent hashing improves data retrieval efficiency in hash-based collections.
+* **Description**: Practical application of the Java Collections Framework focusing on `hashCode()` and `equals()` contracts to ensure logical object identity.
 
 ### 🛒 6. Retail Management System (`06-retail-connect-system`)
-* **Description**: A comprehensive retail ecosystem simulator that manages the entire shopping lifecycle, from warehouse stocking to final receipt generation[cite: 29].
-* **Key Architecture & OOP Patterns**:
-    * **Advanced Collections (Maps & Sets)**: Utilizes `HashMap<Integer, Integer>` in the `Cliente` class to map product IDs to requested quantities for dynamic cart updates. It also uses `HashSet<Prodotto>` in the `Negozio` class to ensure catalog uniqueness.
-    * **Java Stream API & Lambdas**: Implements modern search and filtering logic using `.stream()`, `.filter()`, and `.findFirst()` to efficiently locate products within the store's catalog[cite: 27].
-    * **Business Logic Integration**: The `concludiSpesa` method simulates a real-world transaction by verifying availability, calculating totals, updating store stock, and printing a formatted receipt[cite: 26].
-    * **Data Integrity & Contracts**: Management of the `hashCode` and `equals` contracts (based on unique product IDs) to ensure reliable object handling within hash-based data structures[cite: 28].
-    * **Inventory Synchronization**: Implements logic to handle stock discrepancies using `Math.min()`, preventing sales that exceed current shop availability[cite: 26].
+* **Description**: A comprehensive retail ecosystem simulator managing warehouse stocking, dynamic carts, and transaction logic.
+* **Key Features**:
+    * **Advanced Collections**: Utilizes `HashMap` for dynamic cart updates and `HashSet` for catalog uniqueness.
+    * **Inventory Synchronization**: Implements logic to handle stock discrepancies using `Math.min()`, preventing sales that exceed shop availability.
 
 ### 💳 7. Advanced Retail Framework (`07-retail-connect-evolved`)
-* **Description**: Evolution of the retail system with a tiered customer structure, implementing loyalty programs and differentiated business logic through OOP principles[cite: 21, 24].
-* **Advanced Technical Implementation**:
-    * **Inheritance & Hierarchy**: Implemented specialized behavior by extending the `Cliente_2.class` into `ClienteTesserato.class`, allowing for code reuse of the core shopping logic while adding loyalty-specific features.
-    * **Polymorphic Method Overriding**: Redefined the `concludiSpesa` method in the subclass to integrate automated loyalty point calculations and tiered discount applications.
-    * **State Persistence**: The system tracks and updates the `saldoPunti` (points balance) across multiple transaction cycles, simulating a persistent user profile within the `TestRetailFramework.class`[cite: 21, 24].
-    * **Smart Stock Management**: Integration between `Cliente_2.class` and `Negozio_2.class` ensures that the `quantita` in `Prodotto_2.class` is dynamically decremented only based on actual availability, using `Math.min()` to prevent over-selling[cite: 20, 23].
-    * **Advanced Search Patterns**: Leverages Java Stream API within `Negozio_2.class` to perform predicate-based searches on a `HashSet` of products, optimizing performance for large catalogs.
+* **Description**: Evolution of the retail system introducing specialized loyalty programs and differentiated business logic through inheritance.
+* **Key Architecture**:
+    * **Inheritance (IS-A)**: Extends `Cliente` into `ClienteTesserato` to add persistent state (`saldoPunti`).
+    * **Method Overriding**: Redefines `concludiSpesa` to integrate automated loyalty point calculations and tiered discounts.
+
+### ✈️ 8. Airline Flight Management (`08-flight-management-system`)
+* **Description**: An OO framework designed to manage commercial flight operations, passenger manifests, and revenue tracking.
+* **Key Technical Implementation**:
+    * **Resource Constraint Logic**: Implements rigid validation for seat availability, distinguishing between "First Class" and "Economy" capacities.
+    * **Dynamic Manifest Management**: Uses `ArrayList` for real-time passenger tracking, supporting ID-based ticket removal and data persistence.
+    * **Financial Aggregation**: Logic for calculating total flight revenue by iterating through the passenger list and aggregating multi-class ticket prices.
+    * **Object Formatting**: Overrides `toString()` to provide professional, formatted string representations of passenger data and flight manifests.
 
 ---
 
 ## 🛠️ Tech Stack & Concepts Covered
 * **Language**: Java SE
 * **Tools**: Git, GitHub, `java.util.Scanner`, `java.util.Collections`, `java.io.Stream`
-* **Concepts**: Encapsulation, Polymorphism, Inheritance, Interface-driven design, Hashing contracts, Custom Exception Routing, Matrix Grid Mapping.
+* **Concepts**: 
+    * **Encapsulation & Access Control**: Protecting internal state across complex class interactions.
+    * **Polymorphism & Inheritance (IS-A)**: Building scalable hierarchies for specialized entities.
+    * **Interface-Driven Design**: Decoupling logic from rendering and implementation.
+    * **Hashing Contracts**: Managing `hashCode` and `equals` for reliable data structures.
+    * **Stream API & Lambdas**: Functional-style filtering and searching in large collections.
+    * **Resource Constraint Management**: Implementing real-world business rules (stock limits, seat capacity).
