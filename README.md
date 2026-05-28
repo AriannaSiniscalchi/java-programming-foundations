@@ -49,6 +49,13 @@ The focus of these projects ranges from core exception handling to advanced Obje
     * **Financial Aggregation**: Logic for calculating total flight revenue by iterating through the passenger list and aggregating multi-class ticket prices.
     * **Object Formatting**: Overrides `toString()` to provide professional, formatted string representations of passenger data and flight manifests.
 
+### 📅 9. Event Hierarchy & Comparators (`09-event-collections`)
+* **Description**: A project focused on modeling event hierarchies and ensuring object identity integrity.
+* **Key Features**:
+    * **Object Contracts**: Implementation of `hashCode` and `equals` in the `Animale` class for precise data-based identification[cite: 1].
+    * **Natural Ordering**: Use of the `Comparable` interface in `EventoAtmosferico` and `EventoSociale` to enable sorting based on occurrence frequency[cite: 3, 4].
+    * **Polymorphic Collections**: Demonstrates the use of `ArrayList<Evento>` to manage heterogeneous event types within a single list structure[cite: 5].
+
 ---
 
 ## 🛠️ Tech Stack & Concepts Covered
