@@ -81,6 +81,15 @@ The focus of these projects ranges from core exception handling to advanced Obje
     * **I/O Stream Management**: Integrates sequential console reading by alternating `nextLine()` and `nextInt()` tokens using a unified `java.util.Scanner` instance.
     * **Resource Lifecycle**: Implements explicit resource cleanup via `scanner.close()` to enforce defensive programming and prevent systemic memory leaks.
 
+### 🎓 13. Student Records & Grade Classifier (`java-core-exercises/13-student-grade-classifier`)
+* **Description**: An academic management framework designed to encapsulate student profiles, process primitive grade buffers dynamically, and compile a performance-based leaderboard using custom natural ordering.
+* **Key Features**:
+    * **Constructor Overloading**: Implements flexible initialization pathways to instantiate student objects with optional structural states, handling cases where the country of residence is initially unknown.
+    * **Iterative Buffer Masking**: Computes strict performance averages by scanning fixed-size primitive `int[]` grade arrays while dynamically isolating and masking unrecorded parameters (entries remaining at a default value of zero).
+    * **Natural Sequence Ordering (Comparable)**: Implements the `Comparable<Studente>` interface to override default relational sequencing, leveraging `Double.compare()` to sort dynamic collections in a descending order based on runtime grade averages.
+    * **Logical Identity Contracts**: Overrides standard `equals` and `hashCode` methods to bind data-driven entity comparison exclusively to unique academic serial codes (`matricola`).
+    * **Encapsulated Modification**: Exposes secure mutation pathways (`aggiungiVoto` and `setPaeseResidenza`) bounded by defensive conditional validation checks to protect internal object integrity against illegal input ranges.
+
 ---
 
 ## 🛠️ Tech Stack & Concepts Covered
