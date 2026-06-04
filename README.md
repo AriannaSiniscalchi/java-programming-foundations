@@ -73,6 +73,14 @@ The focus of these projects ranges from core exception handling to advanced Obje
     * **Data Aggregation**: Utilizes the `ArrayList` collection to store validated objects, facilitating the calculation of statistical metrics such as the maximum grade and the arithmetic mean.
     * **Code Modularity**: Follows a clean separation of concerns by splitting the logic into a data model, a processing service (`AnalizzatoreVoti.class`), and a driver for testing purposes[cite: 26, 27].
 
+### 🔤 12. String Manipulation & Substring Extractor (`mips-assembly-exercises/12-substring-extractor`)
+* **Description**: A text-processing application designed to read user string inputs, dynamically compute buffer boundaries, and safely extract subsets of text based on numeric coordinate indices.
+* **Key Components**:
+    * **Dynamic Length Calculation**: Implements string scanning subroutines using loop index counters to evaluate the string's total byte length until encountering the null terminator (`\0`).
+    * **Coordinate Input Validation**: Implements conditional comparison boundaries (`blt`, `bgt`) to ensure the user-provided start (`inizio`) and end (`fine`) pointers fit safely within the string's physical memory offsets.
+    * **Subbuffer Slicing Arithmetic**: Translates Java's default `s.substring(inizio, fine)` boundary logic (inclusive start, exclusive end) into pointer base-address offsets using direct index register displacement.
+    * **Terminal Syscall Pipeline**: Manages structured input/output flows by alternating console string reads (`syscall 8`), integer captures (`syscall 5`), and formatted print routines.
+
 ---
 
 ## 🛠️ Tech Stack & Concepts Covered
