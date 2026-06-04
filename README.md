@@ -66,20 +66,20 @@ The focus of these projects ranges from core exception handling to advanced Obje
 
 ### 📊 11. University Grade Parser & Exception Handling (`11-grade-parser-exception`)
 * **Description**: A multi-class system designed to parse, validate, and analyze academic grade strings using a robust exception handling architecture.
-* **Key Technical Implementation**:
+* **Key Features**:
     * **Domain Model Validation**: Implements a dedicated `VotoStudente.class` that enforces business rules (18-30 range) by throwing a `RuntimeException` during object instantiation.
-    * **Fault-Tolerant Parsing Strategy**: Uses a `try-catch` mechanism within a loop to isolate and skip corrupted data (non-numeric strings or out-of-range values), ensuring the application continues processing the remaining valid data[cite: 28].
-    * **Exception Hierarchy**: Distinguishes between `NumberFormatException` for parsing errors and `RuntimeException` for logical domain violations, demonstrating precise error trapping[cite: 28].
+    * **Fault-Tolerant Parsing Strategy**: Uses a `try-catch` mechanism within a loop to isolate and skip corrupted data (non-numeric strings or out-of-range values), ensuring the application continues processing the remaining valid data.
+    * **Exception Hierarchy**: Distinguishes between `NumberFormatException` for parsing errors and `RuntimeException` for logical domain violations, demonstrating precise error trapping.
     * **Data Aggregation**: Utilizes the `ArrayList` collection to store validated objects, facilitating the calculation of statistical metrics such as the maximum grade and the arithmetic mean.
-    * **Code Modularity**: Follows a clean separation of concerns by splitting the logic into a data model, a processing service (`AnalizzatoreVoti.class`), and a driver for testing purposes[cite: 26, 27].
+    * **Code Modularity**: Follows a clean separation of concerns by splitting the logic into a data model, a processing service (`AnalizzatoreVoti.class`), and a driver for testing purposes.
 
-### 🔤 12. String Manipulation & Substring Extractor (`mips-assembly-exercises/12-substring-extractor`)
-* **Description**: A text-processing application designed to read user string inputs, dynamically compute buffer boundaries, and safely extract subsets of text based on numeric coordinate indices.
-* **Key Components**:
-    * **Dynamic Length Calculation**: Implements string scanning subroutines using loop index counters to evaluate the string's total byte length until encountering the null terminator (`\0`).
-    * **Coordinate Input Validation**: Implements conditional comparison boundaries (`blt`, `bgt`) to ensure the user-provided start (`inizio`) and end (`fine`) pointers fit safely within the string's physical memory offsets.
-    * **Subbuffer Slicing Arithmetic**: Translates Java's default `s.substring(inizio, fine)` boundary logic (inclusive start, exclusive end) into pointer base-address offsets using direct index register displacement.
-    * **Terminal Syscall Pipeline**: Manages structured input/output flows by alternating console string reads (`syscall 8`), integer captures (`syscall 5`), and formatted print routines.
+### 🔤 12. String Manipulation & Substring Extractor (`12-substring-extractor`)
+* **Description**: A text-processing CLI utility designed to read user string inputs, dynamically evaluate buffer properties, and safely extract subsets of text based on numeric coordinate indices.
+* **Key Features**:
+    * **String Property Evaluation**: Utilizes Java's standard API methods (`s.length()`) to read and display total character counts from standard input streams.
+    * **Safe Substring Slicing**: Demonstrates the use of `s.substring(inizio, fine)` boundary logic (inclusive start index, exclusive end index) to extract target sub-buffers.
+    * **I/O Stream Management**: Integrates sequential console reading by alternating `nextLine()` and `nextInt()` tokens using a unified `java.util.Scanner` instance.
+    * **Resource Lifecycle**: Implements explicit resource cleanup via `scanner.close()` to enforce defensive programming and prevent systemic memory leaks.
 
 ---
 
