@@ -1,104 +1,98 @@
 # ☕ Java Object-Oriented Programming Projects
-
-This repository contains a collection of academic applications developed during my second semester of Computer Engineering at the University of Bergamo (UniBG). 
-
-The focus of these projects ranges from core exception handling to advanced Object-Oriented Software Design (OOP) and structural modeling.
+> *Computer Engineering Coursework • University of Bergamo (UniBG)*
 
 ---
 
-## 📂 Project Directory
+### 💻 Overview
+This repository contains a collection of academic applications developed during the **Second Semester** of the Computer Engineering degree at the University of Bergamo (UniBG). 
 
-### 🧮 1. Exception Handling & Fractions (`01-exception-handling-fractions`)
-* **Description**: A robust CLI utility designed to handle logic and runtime mathematical operations with fractions.
-* **Key Features**:
-    * **Custom Checked Exception**: Implements `FrazioneNonCorrettaException` to block domain-specific mathematical errors (e.g., zero denominator).
-    * **Error Tracking**: Demonstrates efficient file handling using `java.util.Scanner` protected by multi-catch blocks.
-
-### ♟️ 2. Chess Board Simulator (`02-chess-board-oop`)
-* **Description**: A complete, object-oriented structural simulation of a classic chess game board, validating movement vectors and logic for every piece.
-* **Key Architecture & OOP Patterns**:
-    * **Inheritance & Polymorphism**: Uses an abstract base `Pezzo` class extended by specialized pieces (e.g., `Pedone`, `Regina`).
-    * **Data Modeling**: Uses `Enum` for team alignment (`Color`) and matrix mapping for board coordinates.
-
-### 📄 3. Advanced I/O & Exception Hierarchy (`03-exceptions`)
-* **Description**: Exploration of low-level file streaming and the creation of a tiered exception hierarchy (Checked vs. Unchecked).
-
-### 📐 4. Geometry System & Interface-Driven Design (`04-EsercitazioneInterfacce`)
-* **Description**: A geometric modeling system that uses interfaces (`Rotatable`, `Scalable`) to decouple mathematical logic from graphical representation.
-
-### 👥 5. Collections Framework & Object Identity (`05-collections`)
-* **Description**: Practical application of the Java Collections Framework focusing on `hashCode()` and `equals()` contracts to ensure logical object identity.
-
-### 🛒 6. Retail Management System (`06-retail-connect-system`)
-* **Description**: A comprehensive retail ecosystem simulator managing warehouse stocking, dynamic carts, and transaction logic.
-* **Key Features**:
-    * **Advanced Collections**: Utilizes `HashMap` for dynamic cart updates and `HashSet` for catalog uniqueness.
-    * **Inventory Synchronization**: Implements logic to handle stock discrepancies using `Math.min()`, preventing sales that exceed shop availability.
-
-### 💳 7. Advanced Retail Framework (`07-retail-connect-evolved`)
-* **Description**: Evolution of the retail system introducing specialized loyalty programs and differentiated business logic through inheritance.
-* **Key Architecture**:
-    * **Inheritance (IS-A)**: Extends `Cliente` into `ClienteTesserato` to add persistent state (`saldoPunti`).
-    * **Method Overriding**: Redefines `concludiSpesa` to integrate automated loyalty point calculations and tiered discounts.
-
-### ✈️ 8. Airline Flight Management (`08-flight-management-system`)
-* **Description**: An OO framework designed to manage commercial flight operations, passenger manifests, and revenue tracking.
-* **Key Technical Implementation**:
-    * **Resource Constraint Logic**: Implements rigid validation for seat availability, distinguishing between "First Class" and "Economy" capacities.
-    * **Dynamic Manifest Management**: Uses `ArrayList` for real-time passenger tracking, supporting ID-based ticket removal and data persistence.
-    * **Financial Aggregation**: Logic for calculating total flight revenue by iterating through the passenger list and aggregating multi-class ticket prices.
-    * **Object Formatting**: Overrides `toString()` to provide professional, formatted string representations of passenger data and flight manifests.
-
-### 📅 9. Event Hierarchy & Comparators (`09-event-collections`)
-* **Description**: A project focused on modeling event hierarchies and ensuring object identity integrity.
-* **Key Features**:
-    * **Object Contracts**: Implementation of `hashCode` and `equals` in the `Animale` class for precise data-based identification[cite: 1].
-    * **Natural Ordering**: Use of the `Comparable` interface in `EventoAtmosferico` and `EventoSociale` to enable sorting based on occurrence frequency[cite: 3, 4].
-    * **Polymorphic Collections**: Demonstrates the use of `ArrayList<Evento>` to manage heterogeneous event types within a single list structure[cite: 5].
-
-### 🎲 10. Robust Random Division (`10-random-division-handler`)
-* **Description**: A defensive programming exercise designed to handle unpredictable runtime scenarios through user input validation and random value generation.
-* **Key Technical Implementation**:
-    * **Multi-Catch Strategy**: Implements a sophisticated error-handling block to distinguish between `InputMismatchException` (caused by invalid user input) and `ArithmeticException` (logic errors such as division by zero).
-    * **Defensive Arithmetic**: Manages the inherent risk of a zero-divisor generated by the `java.util.Random` class, providing specific user feedback for critical runtime failures.
-    * **Resource Management & Lifecycle**: Demonstrates the safe closing of I/O resources using `scanner.close()` to prevent memory leaks, ensuring the program reaches a "Program execution finished" state regardless of success or failure.
-    * **UX-Driven Error Messages**: Provides clear, context-specific console output for different failure modes, improving the maintainability and debuggability of the CLI application.
-
-### 📊 11. University Grade Parser & Exception Handling (`11-grade-parser-exception`)
-* **Description**: A multi-class system designed to parse, validate, and analyze academic grade strings using a robust exception handling architecture.
-* **Key Features**:
-    * **Domain Model Validation**: Implements a dedicated `VotoStudente.class` that enforces business rules (18-30 range) by throwing a `RuntimeException` during object instantiation.
-    * **Fault-Tolerant Parsing Strategy**: Uses a `try-catch` mechanism within a loop to isolate and skip corrupted data (non-numeric strings or out-of-range values), ensuring the application continues processing the remaining valid data.
-    * **Exception Hierarchy**: Distinguishes between `NumberFormatException` for parsing errors and `RuntimeException` for logical domain violations, demonstrating precise error trapping.
-    * **Data Aggregation**: Utilizes the `ArrayList` collection to store validated objects, facilitating the calculation of statistical metrics such as the maximum grade and the arithmetic mean.
-    * **Code Modularity**: Follows a clean separation of concerns by splitting the logic into a data model, a processing service (`AnalizzatoreVoti.class`), and a driver for testing purposes.
-
-### 🔤 12. String Manipulation & Substring Extractor (`12-substring-extractor`)
-* **Description**: A text-processing CLI utility designed to read user string inputs, dynamically evaluate buffer properties, and safely extract subsets of text based on numeric coordinate indices.
-* **Key Features**:
-    * **String Property Evaluation**: Utilizes Java's standard API methods (`s.length()`) to read and display total character counts from standard input streams.
-    * **Safe Substring Slicing**: Demonstrates the use of `s.substring(inizio, fine)` boundary logic (inclusive start index, exclusive end index) to extract target sub-buffers.
-    * **I/O Stream Management**: Integrates sequential console reading by alternating `nextLine()` and `nextInt()` tokens using a unified `java.util.Scanner` instance.
-    * **Resource Lifecycle**: Implements explicit resource cleanup via `scanner.close()` to enforce defensive programming and prevent systemic memory leaks.
-
-### 🎓 13. Student Records & Grade Classifier (`java-core-exercises/13-student-grade-classifier`)
-* **Description**: An academic management framework designed to encapsulate student profiles, process primitive grade buffers dynamically, and compile a performance-based leaderboard using custom natural ordering.
-* **Key Features**:
-    * **Constructor Overloading**: Implements flexible initialization pathways to instantiate student objects with optional structural states, handling cases where the country of residence is initially unknown.
-    * **Iterative Buffer Masking**: Computes strict performance averages by scanning fixed-size primitive `int[]` grade arrays while dynamically isolating and masking unrecorded parameters (entries remaining at a default value of zero).
-    * **Natural Sequence Ordering (Comparable)**: Implements the `Comparable<Studente>` interface to override default relational sequencing, leveraging `Double.compare()` to sort dynamic collections in a descending order based on runtime grade averages.
-    * **Logical Identity Contracts**: Overrides standard `equals` and `hashCode` methods to bind data-driven entity comparison exclusively to unique academic serial codes (`matricola`).
-    * **Encapsulated Modification**: Exposes secure mutation pathways (`aggiungiVoto` and `setPaeseResidenza`) bounded by defensive conditional validation checks to protect internal object integrity against illegal input ranges.
+The focus of these projects ranges from core exception handling to advanced Object-Oriented Software Design (OOP), structural modeling, and robust data management via the Java Collections Framework.
 
 ---
 
-## 🛠️ Tech Stack & Concepts Covered
-* **Language**: Java SE
-* **Tools**: Git, GitHub, `java.util.Scanner`, `java.util.Collections`, `java.io.Stream`
-* **Concepts**: 
-    * **Encapsulation & Access Control**: Protecting internal state across complex class interactions.
-    * **Polymorphism & Inheritance (IS-A)**: Building scalable hierarchies for specialized entities.
-    * **Interface-Driven Design**: Decoupling logic from rendering and implementation.
-    * **Hashing Contracts**: Managing `hashCode` and `equals` for reliable data structures.
-    * **Stream API & Lambdas**: Functional-style filtering and searching in large collections.
-    * **Resource Constraint Management**: Implementing real-world business rules (stock limits, seat capacity).
+### 🛠️ Technical Stack & Core Concepts
+
+| Category | Topics Implemented |
+| :--- | :--- |
+| **🟢 OOP Core Pillars** | Encapsulation, Access Control modifiers, Polymorphism, and Inheritance structures (`IS-A`). |
+| **🔵 Advanced Architecture** | Interface-Driven Design to decouple logic, Abstract classes, Method Overriding, and Method Overloading. |
+| **🟠 Data & Collections** | Java Collections Framework (`ArrayList`, `HashMap`, `HashSet`), Hashing Contracts (`hashCode`/`equals`), and `Comparable` natural ordering. |
+| **🟡 Defensive Programming** | Custom Checked/Unchecked Exception hierarchies, Multi-Catch blocks, Resource Management (`scanner.close()`), and strict Input Validation. |
+
+---
+
+### 📂 Detailed Project Directory
+
+Below is a comprehensive breakdown of each project included in this repository, highlighting its core functionality and technical implementation details.
+
+#### 🧮 1. Exception Handling & Fractions (`01-exception-handling-fractions`)
+> **Core Focus:** Custom Checked Exceptions, `java.util.Scanner`
+* **Description:** A robust CLI utility designed to handle logic and runtime mathematical operations with fractions.
+* **Technical Details:** Implements a custom checked exception `FrazioneNonCorrettaException` to block domain-specific mathematical errors (e.g., zero denominator) and uses multi-catch blocks for error tracking.
+
+#### ♟️ 2. Chess Board Simulator (`02-chess-board-oop`)
+> **Core Focus:** Inheritance, Polymorphism, Matrix Mapping
+* **Description:** A complete, object-oriented structural simulation of a classic chess game board, validating movement vectors and logic for every piece.
+* **Technical Details:** Uses an abstract base `Pezzo` class extended by specialized pieces (e.g., `Pedone`, `Regina`). Uses `Enum` for team alignment (`Color`) and matrix mapping for board coordinates.
+
+#### 📄 3. Advanced I/O & Exception Hierarchy (`03-exceptions`)
+> **Core Focus:** File Streaming, Exception Tiering
+* **Description:** Exploration of low-level file streaming and the creation of a tiered exception hierarchy distinguishing between Checked and Unchecked Exceptions.
+
+#### 📐 4. Geometry System & Interface-Driven Design (`04-EsercitazioneInterfacce`)
+> **Core Focus:** Decoupling, Java Interfaces
+* **Description:** A geometric modeling system that uses custom interfaces (`Rotatable`, `Scalable`) to completely decouple mathematical behavior and logic from graphical representation.
+
+#### 👥 5. Collections Framework & Object Identity (`05-collections`)
+> **Core Focus:** `hashCode()` and `equals()` Contracts
+* **Description:** Practical application of the Java Collections Framework focusing heavily on the `hashCode()` and `equals()` contracts to ensure logical object identity within data structures.
+
+#### 🛒 6. Retail Management System (`06-retail-connect-system`)
+> **Core Focus:** `HashMap`, `HashSet`, Inventory Synchronization
+* **Description:** A comprehensive retail ecosystem simulator managing warehouse stocking, dynamic carts, and transaction logic.
+* **Technical Details:** Utilizes `HashMap` for dynamic cart updates and `HashSet` for catalog uniqueness. Implements synchronization logic to handle stock discrepancies using `Math.min()`.
+
+#### 💳 7. Advanced Retail Framework (`07-retail-connect-evolved`)
+> **Core Focus:** Code Evolution, Specialized Business Logic
+* **Description:** Evolution of the retail system introducing specialized loyalty programs and differentiated business logic through inheritance.
+* **Technical Details:** Extends `Cliente` into `ClienteTesserato` to add persistent state (`saldoPunti`) and redefines `concludiSpesa` via method overriding to integrate automated loyalty point calculations and tiered discounts.
+
+#### ✈️ 8. Airline Flight Management (`08-flight-management-system`)
+> **Core Focus:** Dynamic Manifests, Financial Aggregation, `toString()` Overriding
+* **Description:** An OO framework designed to manage commercial flight operations, passenger manifests, and revenue tracking.
+* **Technical Details:** Implements rigid validation for seat availability (First Class vs. Economy) using an `ArrayList` for real-time passenger tracking. Overrides `toString()` to provide professional console outputs.
+
+#### 📅 9. Event Hierarchy & Comparators (`09-event-collections`)
+> **Core Focus:** Polymorphic Collections, `Comparable` Interface
+* **Description:** A project focused on modeling event hierarchies and ensuring object identity integrity.
+* **Technical Details:** Implements `hashCode` and `equals` in the `Animale` class for precise data-based identification. Uses the `Comparable` interface to enable natural sorting based on occurrence frequency inside polymorphic `ArrayList<Evento>` structures.
+
+#### 🎲 10. Robust Random Division (`10-random-division-handler`)
+> **Core Focus:** Multi-Catch Strategy, Resource Lifecycle, UX Errors
+* **Description:** A defensive programming exercise designed to handle unpredictable runtime scenarios through user input validation and random value generation.
+* **Technical Details:** Differentiates between `InputMismatchException` and `ArithmeticException` (division by zero). Manages safe closing of I/O resources using `scanner.close()` to completely prevent systemic memory leaks.
+
+#### 📊 11. University Grade Parser & Exception Handling (`11-grade-parser-exception`)
+> **Core Focus:** Fault-Tolerant Parsing, Domain Validation
+* **Description:** A multi-class system designed to parse, validate, and analyze academic grade strings using a robust exception handling architecture.
+* **Technical Details:** Implements a `VotoStudente` model that enforces business rules (18-30 range). Uses a `try-catch` mechanism inside loops to isolate and skip corrupted data, storing valid inputs in an `ArrayList` for statistical aggregation.
+
+#### 🔤 12. String Manipulation & Substring Extractor (`12-substring-extractor`)
+> **Core Focus:** String API, Sub-buffer Slicing, Buffer Evaluation
+* **Description:** A text-processing CLI utility designed to read user string inputs, dynamically evaluate buffer properties, and safely extract subsets of text based on numeric coordinate indices.
+* **Technical Details:** Utilizes standard Java API methods (`s.length()`, `s.substring(inizio, fine)`) with explicit safe boundary check logic and alternates `nextLine()` / `nextInt()` tokens using a unified `Scanner` instance.
+
+#### 🎓 13. Student Records & Grade Classifier (`13-student-grade-classifier`)
+> **Core Focus:** Constructor Overloading, Buffer Masking, Encapsulated Modification
+* **Description:** An academic management framework designed to encapsulate student profiles, process primitive grade buffers dynamically, and compile a performance-based leaderboard using custom natural ordering.
+* **Technical Details:** Features constructor overloading for optional states, implements `Comparable<Studente>` leveraging `Double.compare()` for descending sort based on averages, and wraps mutations under strict conditional boundaries.
+
+---
+
+### 🚀 How to Run the Projects
+
+Every project is structured as an autonomous Java application. Make sure you have a Java Development Kit (JDK 11 or higher) installed on your system.
+
+1. **Clone the repository locally:**
+   ```bash
+   git clone [https://github.com/YourGitHubUsername/java-oop-projects.git](https://github.com/YourGitHubUsername/java-oop-projects.git)
